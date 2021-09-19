@@ -13,7 +13,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-</head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
@@ -25,22 +25,75 @@
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <main role="main">
+    <div class="container mt-5">
+      <div class="text-center p-4">
+        <h2>Descripción del producto</h2>
+        <p class="lead">Encontrarás aquí toda la información del producto seleccionada.</p>
+        <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea el producto
+          seleccionado previamente, siempre se visualizará la presente: <strong>Autos</strong>.</p>
+      </div>
+      <h3 id="productName"></h3>
+      <hr class="my-3">
+      <dl>
+        <dt>Descripción</dt>
+        <dd>
+          <p id="productDescription"></p>
+        </dd>
+        <dt>Precio</dt>
+        <dd>
+          <p id="productPrice"></p>
+        </dd>
+
+        <dt>Cantidad de productos vendidos</dt>
+        <dd>
+          <p id="productCount"></p>
+        </dd>
+
+        <dt>Criterio para incluir productos en esta categoría</dt>
+        <dd>
+          <p id="productCriteria"></p>
+        </dd>
+
+        <dt>Imágenes ilustrativas</dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
+          </div>
+        </dd>
+        <dt>Prouctos relacionados</dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="relatedProducts">
+          </div>
+        </dd>
+
+        <dt>Comentarios del producto</dt>
+        <dd>
+            <p id="usersComments"></p>
+
+        </dd>
+
+        <dt> Puntuación del producto
+          <span class="fa fa-star" onclick="calificar()" style="cursor: pointer;" id="star1"></span>
+          <span class="fa fa-star" onclick="calificar()" style="cursor: pointer;" id="star2"></span>
+          <span class="fa fa-star" onclick="calificar()" style="cursor: pointer;" id="star3"></span>
+          <span class="fa fa-star" onclick="calificar()" style="cursor: pointer;" id="star4"></span>
+          <span class="fa fa-star" onclick="calificar()" style="cursor: pointer;" id="star5"></span>
+        </dt> 
+      <br>
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Escribe un comentario..." id="floatingTextarea2" style="height: 100px"></textarea>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-dark">Enviar</button>
+      </dl>
+
+      
+
+ 
+
+      <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a>
     </div>
-  </div>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-right">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-    </div>
+  </main>
   </footer>
   <div id="spinner-wrapper">
     <div class="lds-ring">
@@ -54,6 +107,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+  <script src="js/products.js"></script>
 </body>
 
 </html>

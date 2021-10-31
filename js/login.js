@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function(e){
-  document.getElementById("mostrarUsuario").innerHTML = `Usuario Logueado: `+localStorage.getItem("user");
+  document.getElementById("mostrarUsuario").innerHTML = `Usuario: `+localStorage.getItem("user");
   });
   
   

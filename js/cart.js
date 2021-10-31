@@ -1,7 +1,9 @@
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
-
+document.addEventListener("DOMContentLoaded", function(e){
+  document.getElementById("mostrarUsuario").innerHTML = `Usuario: `+localStorage.getItem("user");
+  });
 
 document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(CART_INFO_URL).then(function(resultObj){
@@ -27,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function(e){
                  <td class="precio">${articles.unitCost} ${articles.currency}</td>
                  <td id="sub"></td>
 
-                 
+                
                
                `
                }

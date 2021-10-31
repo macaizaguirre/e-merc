@@ -52,31 +52,26 @@ function showCategoriesList(){
             ((maxCount == undefined) || (maxCount != undefined && parseInt(category.cost) <= maxCount))){
 
             htmlContentToAppend += `
-            <a href= "product-info.html"
-            target="_blank">Más información</a> 
-            <a href="product-info.html" class="list-group-item list-group-item-action">
-                <div class="row">
-                
-                    <div class="col-3"> 
-                 <img src="` + category.imgSrc + `" alt="` + category.description + `" class="img-thumbnail">
+            <div class="col-md-6">
+            <div id="fullContent"><a href="product-info.html" class="list-group-item list-group-item-action">
+                    <div class="row">
+                        <img src="` + category.imgSrc + `" alt="` + category.description + `" class="img-thumbnail">
                     </div>
-                    
-                    <div class="col">
+                    <div class="row">
                         <div class="d-flex w-100 justify-content-between">
                             <h4 class="mb-1">`+ category.name +`</h4>
                             <small class="text-muted">` + category.soldCount + ` vendidos</small>
                         </div>
                         <p class="mb-1">` + category.description + `</p>
                         <p class="mb-1">` + category.currency + ` ` + category.cost + `</p>
-                       
                     </div>
-                </div>
             </a>
+            </div>
+            </div>
             `
         }
 
         document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
-        
     }
 }
 
@@ -160,34 +155,4 @@ function getRating (){
     }
   }
   
-  document.addEventListener("DOMContentLoaded", function(e){
-     document.getElementById("stars").innerHTML= `
-                                      <div class="star-rating">
-                                      <input id="star-5" type="radio" name="rating" value="5" />
-                                      <label for= "star-5" title "5 stars">
-                                      <i class="active fa fa-star"></i>
-                                      </label>
   
-                                      <input id="star-4" type="radio" name="rating" value="4" />
-                                      <label for= "star-4" title "4 stars">
-                                      <i class="active fa fa-star"></i>
-                                      </label>
-  
-                                      <input id="star-3" type="radio" name="rating" value="3" />
-                                      <label for= "star-3" title "3 stars">
-                                      <i class="active fa fa-star"></i>
-                                      </label>
-  
-                                      <input id="star-2" type="radio" name="rating" value="2" />
-                                      <label for= "star-2" title "2 stars">
-                                      <i class="active fa fa-star"></i>
-                                      </label>
-  
-                                      <input id="star-1" type="radio" name="rating" value="1" />
-                                      <label for= "star-1" title "1 star">
-                                      <i class="active fa fa-star"></i>
-                                      </label>
-  
-                                      </div>
-                                      `;
-                                    })

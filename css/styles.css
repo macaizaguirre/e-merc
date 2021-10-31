@@ -2,6 +2,10 @@
     font-family: 'Raleway', serif !important;
 }
 
+body{
+  background-color:#edf5fa;
+
+}
 .jumbotron .display-4{
     font-weight: bold;
 }
